@@ -1,0 +1,176 @@
+@use "var-func";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grilla{
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+}
+
+h3{
+    font-size: 2.3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 2rem;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+// BOTON UNIVERSE.IO
+
+// Button Hero
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background-color: map-get(var-func.$paleta-colores, main-color);
+    margin-top: 3rem;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.type1::after {
+    content: "AHORA MISMO";
+    height: 50px;
+    width: 150px;
+    background-color: map-get(var-func.$paleta-colores, second-color);;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+    content: "Reserva tu turno";
+    height: 50px;
+    width: 150px;
+    background-color: map-get(var-func.$paleta-colores, main-color);;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+//button cards
+
+.button_card {
+    --bg: #a86ef5;
+    --hover-bg: #ff90e8;
+    --hover-text: #fff;
+    color: #fff;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.button_card:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button_card:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+
+
+
+.amorNails{
+
+    font-size: 3rem;
+    color: map-get(var-func.$paleta-colores, second-color);
+    font-weight: 500;
+    
+}
+
+
+// ESTILOS DE LOS FORMS
+
+.form_reserva{
+
+    margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: map-get(var-func.$paleta-colores, main-color);
+        padding: 30px 20px;
+        border-radius: 25% 10%;;
+}
+    
+.form-label{
+        font-size: 1.5rem;
+        margin-left: 15px;
+        color: map-get(var-func.$paleta-colores, fondo );
+        font-weight: bold;
+}
+    
+.form-control{
+        height: 35px;
+        border: 2px solid map-get(var-func.$paleta-colores, second-color );
+}
+
+.btn{
+        background-color: map-get(var-func.$paleta-colores, second-color );
+        height: 30px;
+        width: 70px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: map-get(var-func.$paleta-colores, fondo );
+        margin-bottom: 10px;
+}

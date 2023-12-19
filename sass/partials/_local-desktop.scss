@@ -1,0 +1,51 @@
+@use "var-func";
+
+@media (min-width: 1200px){
+
+    .experiencia{
+
+        h1{
+            text-align: center;
+            font-size: 2.5rem;
+            color: #9c50ff;
+            text-transform: uppercase;
+            margin-top: 120px;
+        }
+
+        .imagen-texto{
+            @include var-func.flex-box(row,space-evenly,center);
+            padding-bottom: 130px;
+            padding-top: 50px;
+
+            p{
+                width: 30%;
+                margin-right: 200px;
+                font-size: 2.3rem;
+            }
+
+            .carousel{
+                width: 40%;
+                height: 100%;
+                margin-left: 200px;
+                
+            }
+        }
+
+        
+
+        
+    }
+
+    .section-ubicacion{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        .ubicacion{
+
+            iframe{
+                width: 45%;
+            }
+        }
+            
+        }
+}
+

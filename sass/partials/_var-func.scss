@@ -1,0 +1,38 @@
+
+$paleta-colores:(
+    main-color: rgb(252, 157, 165),
+    second-color: #b589ee,
+    fondo:white,
+    borde-curvo:#f788a2
+    
+
+);
+
+@mixin flex-box($direction,$content,$item){
+	display:flex;
+	flex-direction:$direction;
+	justify-content:$content;
+    align-items:$item;
+}
+
+@mixin bg-image{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin borde-curvo($padding-y , $padding-x, $color){
+    background-color: $color;
+    padding: $padding-y $padding-x;
+    border-radius: 10px 100px / 120px;
+}
+
+$img-cards:(
+    carta1: "../img/esmaltado-express.jpg",
+    carta2: "../img/esculpidas-gel.jpg",
+    carta3: "../img/kapping.jpg",
+    carta4: "../img/nail-art.jpg",
+    carta5: "../img/sos.jpg",
+    carta6: "../img/trendy.jpg"
+);

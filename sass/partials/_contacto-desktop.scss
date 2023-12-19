@@ -1,0 +1,49 @@
+@use "var-func";
+
+@media (min-width: 1200px){
+
+    .section-contacto{
+
+        display: grid;
+        grid-template-areas: 
+        "titulo ."
+        "parrafo imagen"
+        "form imagen";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+        justify-items: center;
+    
+        h1{
+            grid-area: titulo;
+            font-size: 4rem;
+            width: 200px;
+            
+        }
+    
+        .form_contacto{
+            grid-area: form;
+            width: 500px;
+            margin-bottom: 150px;
+        }
+        
+        p{
+            grid-area: parrafo;
+            width: 500px;
+        }
+
+        img{
+            grid-area: imagen;
+            width: 450px;
+            height: 450px;
+            margin-bottom: 150px;
+
+            &:hover{
+                transform: scale(1.2);
+                transition: all 0.3s;
+            }
+        }
+    }
+
+}
+

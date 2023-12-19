@@ -1,0 +1,78 @@
+@use "var-func";
+
+@media (min-width: 1200px){
+
+    .formulario{
+
+        .dp-none{
+            display: block;
+        }
+
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafo calendario"
+        "formulario calendario";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        justify-items: center;
+
+
+        p{
+            grid-area: parrafo;
+            width: 500px;
+            font-size: 1.8rem;
+            
+        }
+
+        h1{
+            grid-area: titulo;
+            font-size: 4rem;
+        }
+
+        .form_reserva{
+            grid-area: formulario;
+            width: 450px;
+            justify-self: center;
+            margin-bottom: 65px;
+        }
+
+        img{
+            grid-area: calendario;
+            width: 700px;
+            height: 700px;
+            margin-bottom: 100px;
+            
+        }   
+    }
+
+
+}
+
+
+@media (min-width: 576px) and (max-width: 1199px){ 
+
+    .formulario{
+
+        @include var-func.flex-box(column, center, center);
+
+        h1{
+            font-size: 4rem;
+        }
+
+        .form_reserva{
+            width: 60%;
+        }
+
+        img{
+            grid-area: calendario;
+            width: 400px;
+            height: 400px;
+            
+        }
+    }
+
+
+
+}
+

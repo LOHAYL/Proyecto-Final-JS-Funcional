@@ -1,0 +1,239 @@
+@use "var-func";
+@use "sass:string";
+
+header {
+
+    nav {
+        
+        background-color: map-get(var-func.$paleta-colores, main-color );
+        
+        div{
+            
+            .logo{
+                
+                
+                    color:map-get(var-func.$paleta-colores, fondo );
+                    font-weight: bold;
+                    font-size: 2.5rem;
+                    margin-left: 10px;
+
+                    &:hover{
+                        color: map-get(var-func.$paleta-colores, second-color );
+                        transition: all 0.7s;
+                    }
+                
+
+                
+            }
+
+            div{
+                .navbar-toggler{
+                    height: 45px;
+                    width: 45px;
+                    background-color: map-get(var-func.$paleta-colores, main-color);
+                    border: 3px solid #9f68e6;
+                    border-radius: 10px;
+                    margin: 0 15px 0 auto;
+                }
+            }
+        }
+
+        div{
+            ul{          
+                .nav-link{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+main{
+
+    div{
+        a{
+            img{
+                position: fixed;
+                z-index: 10;
+                height: 130px;
+                width: 130px;
+                bottom:10px;
+                right:10px;
+            }
+        }
+    }
+
+    .eslogan{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.1)),url(../img/main.jpg);
+        @include var-func.bg-image;
+        margin-top: 30px;
+        height: 95vh;
+        @include var-func.flex-box(column,center,center);
+        background-attachment: fixed;
+
+        div{
+
+            
+            @include var-func.flex-box(column,center,center);
+            
+
+    
+            h2{
+                font-size: 6.5rem;
+                color: map-get(var-func.$paleta-colores, fondo );
+            }
+            
+            .every{
+                font-size: 7.5rem;
+                color: map-get(var-func.$paleta-colores, main-color );
+                text-transform: uppercase;
+                
+                
+            }
+            
+            .boton{
+                margin-top: 100px;
+            }
+        }
+
+        .dp-none{
+            display: none;
+        }
+        
+    }
+
+    .queEsAmorNails{
+        padding-top: 30px;
+        background-color:#f4f4f4;
+        @include var-func.flex-box(column,center,center);
+
+        div {
+
+            @include var-func.flex-box(column,center,center);
+
+            h3{
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            p{
+                font-size: 1.8rem;
+                width: 80%;
+                text-align: center;
+            }
+
+        }
+
+        img{
+            height: 350px;
+            width: 350px;
+        }
+    }
+
+    .nuestrosServicios{
+        background-image: linear-gradient(to bottom, #d169ff, #c857ec, #c044da, #b62fc7, #ad10b5);
+        
+        div{
+
+            h2{
+                font-size: 4rem;
+                padding-top: 30px;
+                color: map-get(var-func.$paleta-colores, fondo );
+                text-align: center;
+            }
+
+                .carta-container{
+                    
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    
+                    .carta{
+
+                        height: 400px;
+                        width: 300px;
+                        border: 3px solid map-get(var-func.$paleta-colores, main-color );
+                        border-radius: 15px;
+                        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                        margin: 20px 35px;
+                        padding: 20px 10px;
+                        color: map-get(var-func.$paleta-colores, fondo );
+                        @include var-func.flex-box(column,center,center);
+
+                        p{
+                            margin-top: 15px;
+                            text-align: center
+                        }
+    
+                        h3{
+                            color:map-get(var-func.$paleta-colores, main-color);
+                            font-weight: bold
+                        }
+
+                    }
+                    
+
+                    @each $card, $imagen in var-func.$img-cards{
+                        .#{$card}{
+                            background-image: linear-gradient(
+                            0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)
+                            ),url(string.unquote($imagen));
+                            
+                            @include var-func.bg-image;
+                            
+                        }
+                    }
+                }
+
+            
+        }
+
+
+
+    }
+
+    
+
+}
+
+footer {
+
+    .redes-sociales{
+
+        padding: 40px 0px;
+
+        div{
+
+            h3{
+                text-align: center;
+            }
+            
+            div{
+
+                @include var-func.flex-box(row,center,center);
+
+                img{
+                    margin-top: 20px;
+                    margin-right: 30px;
+                }
+
+
+            }
+
+
+        }
+
+    }
+
+    .derechos{
+        background-color:#ffc6d3;
+        padding: 15px 0px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

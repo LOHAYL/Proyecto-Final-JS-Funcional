@@ -1,0 +1,37 @@
+@use "var-func";
+
+@media (min-width: 1200px) {
+    .preg-frec{
+
+        .dp-none{
+            display: block;
+        }
+
+        .contenedor-titulo{
+            h1{
+                color: map-get(var-func.$paleta-colores, fondo );
+                font-size: 4rem;
+                padding: 30px 0px;
+            }
+        }
+
+        .desktop{
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 2fr 4fr;
+        }
+
+        .politicas{
+            display: grid;
+            grid-template-columns: 2fr 4fr;
+            grid-row: auto;
+            justify-items: center;
+
+            img{
+                height: 500px;
+            }
+        }
+
+
+    }
+}

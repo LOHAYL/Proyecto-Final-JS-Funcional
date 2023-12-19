@@ -1,0 +1,46 @@
+@use "var-func";
+@use "estilos-generales";
+
+.section-contacto{
+    height: 100vh;
+    @include var-func.flex-box(column,center,center);
+    background-image: url(../img/bg-contacto.jpg);
+    @include var-func.bg-image;
+
+    h1{
+        margin-top: 70px;
+        font-size: 3rem;
+        color:map-get(var-func.$paleta-colores, fondo );
+        font-weight: bold;
+        text-align: center;
+        @include var-func.borde-curvo(10px,10px,map-get(var-func.$paleta-colores, main-color ))
+    }
+
+    p{
+        font-size: 1.7rem;
+        padding: 10px 10px;
+        background-color: map-get(var-func.$paleta-colores, main-color );
+        border-radius: 20px;
+        width: 90%;
+        color: map-get(var-func.$paleta-colores, fondo );
+        font-weight: bold;
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .form_contacto{
+        @extend .form_reserva;
+        background-color: map-get(var-func.$paleta-colores, second-color );
+        width: 90%;
+        height: 350px;
+        margin: 0;
+
+        button{
+            background-color: map-get(var-func.$paleta-colores, main-color );
+        }
+    }
+
+}

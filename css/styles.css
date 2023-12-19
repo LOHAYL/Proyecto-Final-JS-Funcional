@@ -1,0 +1,829 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+h2{
+  text-align: center;
+  font-size: 5rem;
+  color: #9c50ff;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+.shop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.productos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.carta_producto{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(252, 157, 165);
+  margin-top: 3rem;
+}
+
+.button:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+
+.type1::after {
+  content: "AHORA MISMO";
+  height: 50px;
+  width: 150px;
+  background-color: #b589ee;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+  content: "Reserva tu turno";
+  height: 50px;
+  width: 150px;
+  background-color: rgb(252, 157, 165);
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+.button_card {
+  --bg: #a86ef5;
+  --hover-bg: #ff90e8;
+  --hover-text: #fff;
+  color: #fff;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.button_card:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button_card:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.amorNails {
+  font-size: 3rem;
+  color: #b589ee;
+  font-weight: 500;
+}
+
+.form_reserva, .section-contacto .form_contacto {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(252, 157, 165);
+  padding: 30px 20px;
+  border-radius: 25% 10%;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.form-control {
+  height: 35px;
+  border: 2px solid #b589ee;
+}
+
+.btn {
+  background-color: #b589ee;
+  height: 30px;
+  width: 70px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+header nav {
+  background-color: rgb(252, 157, 165);
+}
+header nav div .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+header nav div .logo:hover {
+  color: #b589ee;
+  transition: all 0.7s;
+}
+header nav div div .navbar-toggler {
+  height: 45px;
+  width: 45px;
+  background-color: rgb(252, 157, 165);
+  border: 3px solid #9f68e6;
+  border-radius: 10px;
+  margin: 0 15px 0 auto;
+}
+header nav div ul .nav-link {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+main div a img {
+  position: fixed;
+  z-index: 10;
+  height: 130px;
+  width: 130px;
+  bottom: 10px;
+  right: 10px;
+}
+main .eslogan {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../img/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 30px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+main .eslogan div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .eslogan div h2 {
+  font-size: 6.5rem;
+  color: white;
+}
+main .eslogan div .every {
+  font-size: 7.5rem;
+  color: rgb(252, 157, 165);
+  text-transform: uppercase;
+}
+main .eslogan div .boton {
+  margin-top: 100px;
+}
+main .eslogan .dp-none {
+  display: none;
+}
+main .queEsAmorNails {
+  padding-top: 30px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .queEsAmorNails div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .queEsAmorNails div h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .queEsAmorNails div p {
+  font-size: 1.8rem;
+  width: 80%;
+  text-align: center;
+}
+main .queEsAmorNails img {
+  height: 350px;
+  width: 350px;
+}
+main .nuestrosServicios {
+  background-image: linear-gradient(to bottom, #d169ff, #c857ec, #c044da, #b62fc7, #ad10b5);
+}
+main .nuestrosServicios div h2 {
+  font-size: 4rem;
+  padding-top: 30px;
+  color: white;
+  text-align: center;
+}
+main .nuestrosServicios div .carta-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .nuestrosServicios div .carta-container .carta {
+  height: 400px;
+  width: 300px;
+  border: 3px solid rgb(252, 157, 165);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px 35px;
+  padding: 20px 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .nuestrosServicios div .carta-container .carta p {
+  margin-top: 15px;
+  text-align: center;
+}
+main .nuestrosServicios div .carta-container .carta h3 {
+  color: rgb(252, 157, 165);
+  font-weight: bold;
+}
+main .nuestrosServicios div .carta-container .carta1 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/esmaltado-express.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main .nuestrosServicios div .carta-container .carta2 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/esculpidas-gel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main .nuestrosServicios div .carta-container .carta3 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/kapping.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main .nuestrosServicios div .carta-container .carta4 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/nail-art.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main .nuestrosServicios div .carta-container .carta5 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/sos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main .nuestrosServicios div .carta-container .carta6 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trendy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+footer .redes-sociales {
+  padding: 40px 0px;
+}
+footer .redes-sociales div h3 {
+  text-align: center;
+}
+footer .redes-sociales div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .redes-sociales div div img {
+  margin-top: 20px;
+  margin-right: 30px;
+}
+footer .derechos {
+  background-color: #ffc6d3;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  header .bgcolor.scrolled {
+    background-color: white;
+  }
+  header nav {
+    background-color: transparent;
+  }
+  header nav div a {
+    background-color: rgb(252, 157, 165);
+    border-radius: 10px 100px/120px;
+    padding: 5px 10px;
+  }
+  header nav div a h1 {
+    margin-left: 0;
+  }
+  header nav div .navbar-nav a {
+    color: rgb(252, 157, 165);
+    font-size: 2rem;
+    margin: 0 20px;
+    text-transform: uppercase;
+  }
+  header nav div ul .nav-link:hover {
+    color: #b589ee;
+    transition: 0.7s;
+  }
+  main .eslogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    height: 100vh;
+  }
+  main .eslogan .dp-none {
+    display: block;
+  }
+  main .eslogan .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+  main .eslogan .texto .dp-none p {
+    font-size: 2.4rem;
+    color: white;
+    width: 551px;
+    text-align: center;
+  }
+  main .eslogan .texto h2 {
+    font-size: 10rem;
+  }
+  main .eslogan .texto .every {
+    font-size: 11.3rem;
+  }
+  main .eslogan .texto a .boton {
+    margin-top: 30px;
+  }
+  main .eslogan img {
+    height: 500px;
+    width: 500px;
+  }
+  main .queEsAmorNails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .queEsAmorNails .texto {
+    margin-left: 200px;
+    height: 600px;
+  }
+  main .queEsAmorNails .texto h3 {
+    font-size: 3rem;
+  }
+  main .queEsAmorNails .texto p {
+    font-size: 2.5rem;
+  }
+  main .queEsAmorNails img {
+    margin-right: 200px;
+    height: 500px;
+    width: 500px;
+  }
+}
+.preg-frec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preg-frec .dp-none {
+  display: none;
+}
+.preg-frec p {
+  text-align: center;
+  width: 80%;
+  padding: 20px 0px;
+}
+.preg-frec h2 {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 3rem;
+}
+.preg-frec .accordion-body {
+  font-size: 1.5rem;
+  border: 3px dashed rgb(252, 157, 165);
+  border-radius: 10px;
+  font-weight: 500;
+}
+.preg-frec .accordion-button {
+  font-size: 2rem;
+  background-color: #f788a2;
+  color: white;
+  border-radius: 10px;
+}
+.preg-frec .accordion-item {
+  border: none;
+}
+.preg-frec .accordion-button {
+  margin-bottom: 20px;
+}
+.preg-frec .button-mp {
+  background-color: #b589ee;
+}
+.preg-frec .contenedor-titulo {
+  padding: 20px 0px;
+  width: 100%;
+}
+.preg-frec .contenedor-titulo h1 {
+  margin-top: 75px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background-color: #f788a2;
+  padding: 20px 0px;
+  border-radius: 10px 100px/120px;
+}
+.preg-frec .retiro-compras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preg-frec .politicas {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .preg-frec .dp-none {
+    display: block;
+  }
+  .preg-frec .contenedor-titulo h1 {
+    color: white;
+    font-size: 4rem;
+    padding: 30px 0px;
+  }
+  .preg-frec .desktop {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 4fr;
+  }
+  .preg-frec .politicas {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-row: auto;
+    justify-items: center;
+  }
+  .preg-frec .politicas img {
+    height: 500px;
+  }
+}
+.experiencia h1 {
+  margin-top: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #b589ee;
+  font-weight: bold;
+}
+.experiencia .imagen-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experiencia .imagen-texto p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 90%;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 10% 10%;
+  background-color: #c79ffc;
+  padding: 20px;
+  color: white;
+}
+.experiencia .imagen-texto .carousel {
+  width: 85%;
+  height: 40vh;
+}
+.experiencia .imagen-texto .carousel .d-block {
+  height: 40vh;
+  border-radius: 10px;
+}
+.experiencia .imagen-texto .carousel .carousel-indicators .active {
+  background-color: #b589ee;
+  border-radius: 0px;
+}
+.experiencia .imagen-texto .carousel button {
+  border-radius: 20px;
+}
+.experiencia .imagen-texto .carousel button:hover {
+  background-color: #b589ee;
+}
+
+.section-ubicacion {
+  background-color: #ffc6d3;
+}
+.section-ubicacion .ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.section-ubicacion .ubicacion h2 {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #b589ee;
+  font-weight: bold;
+}
+.section-ubicacion .ubicacion iframe {
+  width: 90%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1200px) {
+  .experiencia h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #9c50ff;
+    text-transform: uppercase;
+    margin-top: 120px;
+  }
+  .experiencia .imagen-texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 130px;
+    padding-top: 50px;
+  }
+  .experiencia .imagen-texto p {
+    width: 30%;
+    margin-right: 200px;
+    font-size: 2.3rem;
+  }
+  .experiencia .imagen-texto .carousel {
+    width: 40%;
+    height: 100%;
+    margin-left: 200px;
+  }
+  .section-ubicacion {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .section-ubicacion .ubicacion iframe {
+    width: 45%;
+  }
+}
+.formulario {
+  background-image: url(../img/fondo-pages.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.formulario p {
+  width: 80%;
+  font-size: 1.5rem;
+  background-color: #b589ee;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+}
+.formulario .form_reserva {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.formulario .dp-none {
+  display: none;
+}
+.formulario h1 {
+  padding-top: 100px;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #b589ee;
+}
+
+@media (min-width: 1200px) {
+  .formulario {
+    display: grid;
+    grid-template-areas: "titulo titulo" "parrafo calendario" "formulario calendario";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+  .formulario .dp-none {
+    display: block;
+  }
+  .formulario p {
+    grid-area: parrafo;
+    width: 500px;
+    font-size: 1.8rem;
+  }
+  .formulario h1 {
+    grid-area: titulo;
+    font-size: 4rem;
+  }
+  .formulario .form_reserva {
+    grid-area: formulario;
+    width: 450px;
+    justify-self: center;
+    margin-bottom: 65px;
+  }
+  .formulario img {
+    grid-area: calendario;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1199px) {
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario h1 {
+    font-size: 4rem;
+  }
+  .formulario .form_reserva {
+    width: 60%;
+  }
+  .formulario img {
+    grid-area: calendario;
+    width: 400px;
+    height: 400px;
+  }
+}
+.section-contacto {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/bg-contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.section-contacto h1 {
+  margin-top: 70px;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(252, 157, 165);
+  padding: 10px 10px;
+  border-radius: 10px 100px/120px;
+}
+.section-contacto p {
+  font-size: 1.7rem;
+  padding: 10px 10px;
+  background-color: rgb(252, 157, 165);
+  border-radius: 20px;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+}
+.section-contacto img {
+  width: 200px;
+  height: 200px;
+}
+.section-contacto .form_contacto {
+  background-color: #b589ee;
+  width: 90%;
+  height: 350px;
+  margin: 0;
+}
+.section-contacto .form_contacto button {
+  background-color: rgb(252, 157, 165);
+}
+
+@media (min-width: 1200px) {
+  .section-contacto {
+    display: grid;
+    grid-template-areas: "titulo ." "parrafo imagen" "form imagen";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    justify-items: center;
+  }
+  .section-contacto h1 {
+    grid-area: titulo;
+    font-size: 4rem;
+    width: 200px;
+  }
+  .section-contacto .form_contacto {
+    grid-area: form;
+    width: 500px;
+    margin-bottom: 150px;
+  }
+  .section-contacto p {
+    grid-area: parrafo;
+    width: 500px;
+  }
+  .section-contacto img {
+    grid-area: imagen;
+    width: 450px;
+    height: 450px;
+    margin-bottom: 150px;
+  }
+  .section-contacto img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,85 @@
+@use "var-func";
+
+.preg-frec{
+
+    @include var-func.flex-box(column,center,center);
+
+    //Estilos Generales
+    .dp-none{
+        display: none;
+    }
+
+    p{
+        text-align: center;
+        width: 80%;
+        padding: 20px 0px;
+    }
+
+    h2{
+        text-align: center;
+        padding: 20px 0px;
+        font-size: 3rem ;
+    }
+
+    .accordion-body{
+        font-size: 1.5rem;
+        border: 3px dashed map-get(var-func.$paleta-colores, main-color );
+        border-radius: 10px;
+        font-weight: 500;
+        
+    }
+    
+    .accordion-button{
+        font-size: 2rem;
+        background-color: map-get(var-func.$paleta-colores, borde-curvo );
+        color: map-get(var-func.$paleta-colores, fondo );
+        border-radius: 10px;
+        
+        
+    }
+
+    .accordion-item{
+        border: none;
+    
+    }
+
+    .accordion-button{
+        margin-bottom: 20px;
+    
+    }
+
+    .button-mp{
+        background-color: map-get(var-func.$paleta-colores,second-color );
+    }
+
+    //**
+
+    .contenedor-titulo{
+
+        padding: 20px 0px;
+        width: 100%;
+
+        h1{
+            margin-top: 75px;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: map-get(var-func.$paleta-colores, fondo );
+            @include var-func.borde-curvo(20px,0px,map-get(var-func.$paleta-colores, borde-curvo ));
+
+        }
+
+    }
+
+    .retiro-compras{
+        @include var-func.flex-box(column,center,center);
+    }
+
+    .politicas{
+        width: 100%;
+    }
+
+
+
+
+}
