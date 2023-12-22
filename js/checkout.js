@@ -58,15 +58,16 @@ botonCompra.addEventListener("click", () => {
       .then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
-                text: "Muchas gracias por su compra. Le enviamos los productos al domicilio indicado en su perfil.",
+                text: "Muchas gracias por su compra. Le enviaremos un mail con numero de seguimiento de su pedido",
                 showConfirmButton: false,
-                icon: "info",
+                icon: "success",
                 timer: 2500
+               
             })
-        
+            monto.textContent = "0";
             localStorage.removeItem("miCarrito")
             carrito.length = 0
-            tableBody.innerHTML = ""
+            tabla.innerHTML = ""
 
         } else if (result.isDenied) {
               Swal.fire({

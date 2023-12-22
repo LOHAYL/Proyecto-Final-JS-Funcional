@@ -16,6 +16,12 @@ h2{
   margin-top: 20px;
 }
 
+.carro_vacio{
+  font-weight: bold;
+  color: red;
+  font-size: 25px;
+}
+
 .imagen_carrito{
   height: 150px;
   width: 150px;

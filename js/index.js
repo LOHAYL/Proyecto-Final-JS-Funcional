@@ -43,6 +43,17 @@ function cargarProductos(array){
 
 }
 
+function notificacion(mensaje, tiempo, color) {
+    Toastify({
+        text: mensaje || "Producto agregado al carrito",
+        position: "center",
+        stopOnFocus: true,
+        gravity: "top",
+        duration: tiempo || 2000,
+        style: { background: color, }
+    }).showToast()
+}
+
 function actualizarContador(){
     return `<p>${contadorArticulos}</p>`
 }
@@ -56,6 +67,7 @@ function agregarClickEnBtnCards() {
                 carrito.push(productoSeleccionado)
                 contadorArticulos++;
                 contador.innerHTML = actualizarContador();
+                notificacion(`${productoSeleccionado.nombre} agregado al carrito`, 1500, '#9c50ff')
                 guardarEnLS()
                 
             })
