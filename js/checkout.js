@@ -65,9 +65,14 @@ botonCompra.addEventListener("click", () => {
                
             })
             monto.textContent = "0";
-            localStorage.removeItem("miCarrito")
-            carrito.length = 0
-            tabla.innerHTML = ""
+            localStorage.removeItem("miCarrito");
+            carrito.length = 0;
+            tabla.innerHTML = "";
+            
+            setTimeout(function(){
+                location.href = "../index.html";
+            }, 3000);
+            
 
         } else if (result.isDenied) {
               Swal.fire({
