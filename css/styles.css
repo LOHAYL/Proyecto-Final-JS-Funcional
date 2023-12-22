@@ -21,6 +21,18 @@ h2{
   width: 150px;
 }
 
+.eliminar-producto:hover{
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
+
+#total_pagar{
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+}
+
 .tablaContenedor{
   display: flex;
   flex-direction: column;
